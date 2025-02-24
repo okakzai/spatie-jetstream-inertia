@@ -1,0 +1,40 @@
+TUTORIAL
+https://codingoblin.com/roles-and-permissions-in-laravel-jetstream-inertiajs-using-spatie-package/
+
+TEKNOLOGI
+- PHP 8.2.12
+- Laravel 10.48.28
+- MariaDB 10.4.32 
+- Node.js 21.7.3
+- Jetstream 4.3.1 (Inertia.js 0.6.8 + Tailwind CSS 3.1.0)
+- Spatie 6.15.0
+
+DEVELOPMENT
+1. Terminal: composer create-project --prefer-dist laravel/laravel spatie-jetstream-inertia "10.*"
+2. Terminal: cd spatie-jetstream-inertia
+3. PHPMyAdmin: Buat tabel 'spatie-jetstream-inertia'
+4. VSCode: Edit file '.env' terkait koneksi database
+5. Terminal: composer require laravel/jetstream
+6. Terminal: php artisan jetstream:install inertia
+7. Terminal: php artisan migrate
+8. Terminal: composer require spatie/laravel-permission
+9. Terminal: php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+10. Terminal: php artisan migrate
+11. VSCode: Edit file 'Users.php' di folder 'app/Models'
+12. Terminal: php artisan make:seeder RolesSeeder
+13. Terminal: php artisan make:seeder UsersSeeder
+14. Terminal: php artisan db:seed
+15. VSCode: Edit file 'CreateNewUser.php' di folder 'app/Actions/Fortify'
+16. VSCode: Edit file 'HandleInertiaRequests.php' di folder 'app/Http/Middleware'
+17. VSCode: Edit file 'Welcome.vue' di folder 'resources/js/Components'
+18. Terminal: npm run build
+19. Terminal: php artisan serve
+20. Terminal: git init
+21. Terminal: git add .
+22. Terminal: git commit -m "Pertamaz"
+23. Terminal: git branch -M main
+24. Terminal: git remote add origin https://github.com/okakzai/spatie-jetstream-inertia.git
+25. Terminal: git pull origin main --rebase
+26. Terminal: git push -u origin main
+
+
